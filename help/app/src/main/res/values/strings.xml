@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Help! Please</string>
+    <string name="user_type">Select type</string>
+
+    <string-array name="arrUserTypes">
+        <item>Captain</item>
+        <item>Boat Owner</item>
+        <item>Rescuer</item>
+    </string-array>
 </resources>
