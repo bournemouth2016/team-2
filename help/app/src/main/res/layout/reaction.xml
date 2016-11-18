@@ -4,33 +4,34 @@
     android:layout_height="match_parent"
     android:baselineAligned="false">
 
+    <ImageButton
+        android:src="@android:drawable/checkbox_on_background"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="53dp"
+        android:id="@+id/imageButton"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        />
+
     <ProgressBar
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="71dp"
         android:id="@+id/progressBar2"
-        android:layout_marginLeft="157dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="TextView"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="24dp"
         android:id="@+id/textView3"
-        android:layout_marginLeft="80dp"
         android:layout_below="@+id/progressBar2"
-        android:layout_alignParentLeft="true" />
-
-    <ImageButton
-        android:src="@android:drawable/checkbox_on_background"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="66dp"
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
