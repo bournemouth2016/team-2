@@ -14,18 +14,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button5"
-        android:layout_above="@+id/button4"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="74dp" />
+       android:layout_alignParentTop="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentEnd="true" />
 
     <Button
-        android:text="HELP"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:id="@+id/button4"
         android:textAppearance="@android:style/TextAppearance"
         android:elevation="0dp"
-        android:layout_marginBottom="165dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/exclamation_icon"
+        android:clickable="true" />
+
+    <Button
+        android:text="Go out to sea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/boat_icon" />
 </RelativeLayout>
