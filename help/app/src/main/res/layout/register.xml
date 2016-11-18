@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:baselineAligned="false">
+
+    <TextView
+        android:text="Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblTitle"
+        android:textSize = "32sp"
+        android:gravity = "center"
+        android:layout_weight="0.03" />
+
+    <TextView
+        android:text="User"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:textSize = "17sp"
+        android:id="@+id/lblUserType"
+        android:layout_below="@+id/lblTitle"
+        android:layout_alignLeft="@+id/drpTypeofUser"
+        android:layout_alignStart="@+id/drpTypeofUser" />
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:entries="@array/arrUserTypes"
+        android:prompt="@string/user_type"
+        android:id="@+id/drpTypeofUser"
+        android:textSize = "17sp"
+        android:layout_below="@+id/lblUserType"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "17sp"
+        android:id="@+id/lblPhone"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/drpTypeofUser"
+        android:layout_alignLeft="@+id/drpTypeofUser"
+        android:layout_alignStart="@+id/drpTypeofUser" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/txtPhone"
+        android:layout_below="@+id/lblPhone"
+        android:layout_alignLeft="@+id/lblPhone"
+        android:layout_alignStart="@+id/lblPhone" />
+
+    <TextView
+        android:text="People on Board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "17sp"
+        android:id="@+id/txtPeople"
+        android:layout_below="@+id/txtPhone"
+        android:layout_alignLeft="@+id/txtPhone"
+        android:layout_alignStart="@+id/txtPhone"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:layout_below="@+id/txtPeople"
+        android:layout_alignLeft="@+id/txtPeople"
+        android:layout_alignStart="@+id/txtPeople" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/checkbox_on_background"
+
+        android:layout_marginTop="43dp"
+        android:id="@+id/imageButton"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
