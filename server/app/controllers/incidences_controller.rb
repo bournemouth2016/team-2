@@ -1,0 +1,2 @@
+class IncidencesController < ApplicationController
+end
