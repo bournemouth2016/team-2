@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  boat: MyString
+  coordinates: MyString
+  casualties: 1
+  problem: MyString
+  captain: MyString
+
+two:
+  boat: MyString
+  coordinates: MyString
+  casualties: 1
+  problem: MyString
+  captain: MyString

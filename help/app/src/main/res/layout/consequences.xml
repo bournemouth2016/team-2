@@ -75,27 +75,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <ToggleButton
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New ToggleButton"
-        android:id="@+id/toggleButton3"
-        android:textOff="Yup"
-        android:textOn="Yup"
-        android:textSize="40dp"
+        android:id="@+id/vesselLost"
         android:layout_below="@+id/imageView3"
-        android:layout_alignRight="@+id/increment_death"
-        android:layout_alignEnd="@+id/increment_death" />
-
-    <ToggleButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/toggleButton6"
-        android:textOff="Nope"
-        android:textOn="Nope"
-        android:textSize="40dp"
-        android:layout_below="@+id/imageView3"
-        android:layout_toRightOf="@+id/deaths"
-        android:layout_toEndOf="@+id/deaths" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:checked="false"
+        android:scaleX="5"
+        android:scaleY="5"/>
 
 </RelativeLayout>
