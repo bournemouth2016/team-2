@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_weight="0.33">
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="121dp"
+            android:id="@+id/toggleButton5"
+            android:layout_weight="1" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="128dp"
+            android:id="@+id/toggleButton4"
+            android:layout_weight="1"
+            android:textSize="14sp" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="116dp"
+            android:id="@+id/toggleButton2"
+            android:layout_weight="1" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="122dp"
+            android:id="@+id/toggleButton"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:layout_weight="0.13">
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="146dp"
+            android:id="@+id/toggleButton11" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="147dp"
+            android:id="@+id/toggleButton10" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="149dp"
+            android:id="@+id/toggleButton9" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:id="@+id/toggleButton8" />
+    </LinearLayout>
+
+    <Button
+        android:text="Send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_weight="0.22" />
+
+</LinearLayout>
