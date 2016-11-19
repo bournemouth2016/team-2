@@ -24,6 +24,7 @@
         <activity android:name=".Help"></activity>
         <activity android:name=".Distress"></activity>
         <activity android:name=".Register"></activity>
+        <activity android:name=".Incident"></activity>
     </application>
 
 </manifest>

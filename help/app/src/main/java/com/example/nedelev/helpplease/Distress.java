@@ -1,4 +1,5 @@
 package com.example.nedelev.helpplease;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,9 @@ public class Distress extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
+        Button btnHelp = (Button)findViewById(R.id.button);
+        // Register the onClick listener with the implementation above
+        btnHelp.setOnClickListener(help);
         //new Distress().run();
     }
 
@@ -22,6 +26,13 @@ public class Distress extends AppCompatActivity  {
         numOfRes++;
         return numOfRes;
     }
+
+    private View.OnClickListener help = new View.OnClickListener() {
+        public void onClick(View v) {
+            Intent intent = new Intent(v.getContext(), Incident.class);
+            startActivity(intent);
+        }
+    };
 
     private void helpArrived(){
         helpArrived = true;

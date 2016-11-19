@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.parse.ParseObject;
+
 /**
  * Created by Dankoff on 19/11/2016.
  */
@@ -14,15 +16,18 @@ public class Incident extends AppCompatActivity {
 
     private int livesLost;
     private boolean vesselLost;
-    private int lives;
+    private int peopleOnBoard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
         vesselLost = false;
-        lives = getIntent().getIntExtra("peopleNum", 0);
+        peopleOnBoard = getIntent().getIntExtra("peopleNum", 0);
         livesLost = 0;
+        Button btnSubmit = (Button) findViewById(R.id.submit);
+        btnSubmit.setOnClickListener(submit);
+        updateLives();
     }
 
     public int getLivesLost() {
@@ -30,11 +35,7 @@ public class Incident extends AppCompatActivity {
     }
 
     public int getLivesSaved() {
-
-    }
-
-    public void setLivesSaved(int livesSaved) {
-
+        return peopleOnBoard - livesLost;
     }
 
     public void setVesselLost(boolean lost) {
@@ -59,6 +60,7 @@ public class Incident extends AppCompatActivity {
 
     private View.OnClickListener submit = new View.OnClickListener() {
         public void onClick(View v) {
+            updateServer();
             Intent intent = new Intent(v.getContext(), MainAction.class);
             startActivity(intent);
         }
@@ -74,6 +76,9 @@ public class Incident extends AppCompatActivity {
     }
 
     private void updateServer() {
-
+        ParseObject incidentReport = new ParseObject("Incident");
+        incidentReport.put("casulties", livesLost);
+        incidentReport.put("boatSaved", !vesselLost);
+        incidentReport.saveInBackground();
     }
 }

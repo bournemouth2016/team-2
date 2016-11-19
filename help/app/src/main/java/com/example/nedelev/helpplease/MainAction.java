@@ -49,9 +49,9 @@ public class MainAction extends AppCompatActivity {
                         .build());
         //Setup default stats
         journeyObject = new ParseObject("Journey");
-        journeyObject.put("boat", boat);
+        //journeyObject.put("boat", boat);
         journeyObject.put("numPassengers", journey.getNumberOfPassengers());
-        journeyObject.put("currentLocation", journey.getLocationList());
+        //journeyObject.put("currentLocation", journey.getLocationList());
         journeyObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above
