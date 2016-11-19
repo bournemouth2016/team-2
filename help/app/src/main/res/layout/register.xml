@@ -68,13 +68,14 @@
         android:layout_alignStart="@+id/txtPhone"
         android:layout_marginTop="16dp" />
 
-    <ImageButton
+    <Button
+        android:text="submit"
         android:layout_height="75dp"
         android:layout_width="100dp"
 
         android:layout_marginTop="46dp"
         android:scaleType = "fitCenter"
-        android:id="@+id/imageButton"
+        android:id="@+id/submitButton"
         android:layout_below="@+id/txtPeople"
         android:layout_alignLeft="@+id/txtPeople"
         android:layout_alignStart="@+id/txtPeople" />

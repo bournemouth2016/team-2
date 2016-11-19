@@ -9,15 +9,10 @@ import android.widget.Button;
 
 
 public class Register extends AppCompatActivity {
-    private View.OnClickListener help = new View.OnClickListener() {
-        public void onClick(View v) {
-            Intent intent = new Intent(v.getContext(), Help.class);
-            startActivity(intent);
-        }
-    };
-    private View.OnClickListener reg = new View.OnClickListener() {
-        public void onClick(View v) {
-            Intent intent = new Intent(v.getContext(), Register.class);
+
+    private Button.OnClickListener submitPress = new Button.OnClickListener() {
+        @Override public void onClick(View v) {
+            Intent intent = new Intent(v.getContext(), MainAction.class);
             startActivity(intent);
         }
     };
@@ -25,14 +20,9 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.register);
 
-        Button helpMe = (Button)findViewById(R.id.helpButton);
-        // Register the onClick listener with the implementation above
-        helpMe.setOnClickListener(this.help);
-        Button regMe = (Button)findViewById(R.id.button5);
-        // Register the onClick listener with the implementation above
-        regMe.setOnClickListener(this.reg);
-
+        Button submit = (Button)findViewById(R.id.submitButton);
+        submit.setOnClickListener(this.submitPress);
     }
 }
