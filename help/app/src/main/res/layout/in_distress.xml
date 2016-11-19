@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="0"
+        android:text="2"
         android:id="@+id/rescuers_coming"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="32dp"
