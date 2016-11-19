@@ -1,4 +1,4 @@
-package com.example.hamish.rnlicodeforgood;
+package com.example.nedelev.helpplease;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
