@@ -59,9 +59,13 @@ public class Incident extends AppCompatActivity {
 
     private View.OnClickListener livesDown = new View.OnClickListener() {
         public void onClick(View v) {
+<<<<<<< HEAD
             if (livesLost > 0) {
                 livesLost--;
             }
+=======
+            livesLost--;
+>>>>>>> 4f998eb5df1a0490b79caa365596b2512f3fc8b0
             mTextView.setText("" + livesLost);
         }
     };
