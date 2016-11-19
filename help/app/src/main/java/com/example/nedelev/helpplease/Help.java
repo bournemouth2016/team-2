@@ -15,7 +15,7 @@ import com.parse.ParseObject;
 public class Help extends AppCompatActivity {
 
     private RequestHandler distressObject;
-    private ArrayList<Integer> typeOfEmergency = new ArrayList<Integer>();
+    private ArrayList<String> typeOfEmergency = new ArrayList<String>();
 
     private CompoundButton.OnCheckedChangeListener sinking = new CompoundButton.OnCheckedChangeListener() {
         public void onCheckedChanged(CompoundButton button, boolean isChecked) {
@@ -110,28 +110,28 @@ public class Help extends AppCompatActivity {
         if(checked) {
             switch (butt.getText().toString()) {
                 case "SINKING":
-                    typeOfEmergency.add(1);
+                    typeOfEmergency.add("Sinking");
                     break;
                 case "DROWNING":
-                    typeOfEmergency.add(2);
+                    typeOfEmergency.add("Drowning");
                     break;
                 case "MEDICINE":
-                    typeOfEmergency.add(3);
+                    typeOfEmergency.add("Medicine");
                     break;
                 case "INJURY":
-                    typeOfEmergency.add(4);
+                    typeOfEmergency.add("Injury");
                     break;
                 case "FIRE":
-                    typeOfEmergency.add(5);
+                    typeOfEmergency.add("Fire");
                     break;
                 case "ASSAULT":
-                    typeOfEmergency.add(6);
+                    typeOfEmergency.add("Assault");
                     break;
                 case "LOST":
-                    typeOfEmergency.add(7);
+                    typeOfEmergency.add("Lost");
                     break;
                 case "ENGINE":
-                    typeOfEmergency.add(8);
+                    typeOfEmergency.add("Engine");
                     break;
                 default:
                     send();
@@ -145,11 +145,8 @@ public class Help extends AppCompatActivity {
 
     }
     private void send(){
-
         for(int i = 0 ; typeOfEmergency.size()<i; i++){
-            switch (typeOfEmergency.get(i)):
-            case 1:
-                distressObject.put("incidentType", "");
+            distressObject.put("incidentType", typeOfEmergency.get(i));
         }
         Intent intent = new Intent(this, Distress.class);
         intent.putExtra("peopleNum", getIntent().getIntExtra("people",0));

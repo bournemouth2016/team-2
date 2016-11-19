@@ -20,7 +20,7 @@ public class MainAction extends AppCompatActivity {
     private View.OnClickListener help = new View.OnClickListener() {
         public void onClick(View v) {
             ParseObject distressObject = new ParseObject("Distress");
-            distressObject.put("journey", journeyObject.get("objectId"));
+            distressObject.put("journey", journeyObject.getObjectId());
             distressObject.saveInBackground();
             RequestHandler distressHandler = new RequestHandler(distressObject);
             Intent intent = new Intent(v.getContext(), Help.class);
