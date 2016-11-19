@@ -37,8 +37,8 @@
             android:layout_height="120dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:textOff="FIRE"
-            android:textOn="FIRE"
+            android:textOff="MEDICINE"
+            android:textOn="MEDICINE"
             android:id="@+id/toggleButton3" />
 
         <ToggleButton
@@ -47,8 +47,8 @@
             android:layout_height="120dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:textOff="ASSAULT"
-            android:textOn="ASSAULT"
+            android:textOff="INJURY"
+            android:textOn="INJURY"
             android:id="@+id/toggleButton4" />
 
         <ToggleButton
@@ -60,8 +60,8 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:saveEnabled="true"
-            android:textOff="MEDICAL"
-            android:textOn="MEDICAL"
+            android:textOff="FIRE"
+            android:textOn="FIRE"
             android:scrollHorizontally="false" />
 
         <ToggleButton
@@ -71,8 +71,8 @@
             android:id="@+id/toggleButton5"
             android:layout_alignTop="@+id/toggleButton4"
             android:layout_alignLeft="@+id/toggleButton2"
-            android:textOff="LOST"
-            android:textOn="LOST"
+            android:textOff="ASSAULT"
+            android:textOn="ASSAULT"
             android:drawableBottom="@android:drawable/ic_delete"/>
 
         <ToggleButton
@@ -83,8 +83,8 @@
             android:layout_marginLeft="51dp"
             android:layout_above="@+id/toggleButton6"
             android:layout_toRightOf="@+id/toggleButton7"
-            android:textOff="INJURY"
-            android:textOn="INJURY"
+            android:textOff="LOST"
+            android:textOn="LOST"
             android:drawableBottom="@android:drawable/ic_menu_info_details"/>
 
         <ToggleButton

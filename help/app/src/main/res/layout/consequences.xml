@@ -35,16 +35,6 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:id="@+id/button3"
-        android:textSize="50sp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -85,5 +75,14 @@
         android:checked="false"
         android:scaleX="5"
         android:scaleY="5"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/button3"
+        android:textSize="50sp"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignRight="@+id/toggleButton6" />
 
 </RelativeLayout>
