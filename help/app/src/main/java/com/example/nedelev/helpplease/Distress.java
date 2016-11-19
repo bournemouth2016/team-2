@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 public class Distress extends AppCompatActivity  {
     private boolean helpArrived = false;
     private int numOfRes = 0;
-    private TextView mTextField = (TextView) findViewById(R.id.eta_label);
+    private TextView mTextField;
 
     private CountDownTimer timer = new CountDownTimer(30000, 1000) {
 
@@ -30,6 +30,7 @@ public class Distress extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
+        mTextField = (TextView) findViewById(R.id.eta_label);
         //new Distress().run();
     }
 
