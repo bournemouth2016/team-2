@@ -133,6 +133,10 @@ public class Help extends AppCompatActivity {
                     send();
                     break;
             }
+        } else {
+            if (butt == null) {
+                send();
+            }
         }
 
     }

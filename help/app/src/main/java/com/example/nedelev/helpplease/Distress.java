@@ -6,7 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class Distress extends AppCompatActivity implements Runnable {
+public class Distress extends AppCompatActivity  {
     private boolean helpArrived = false;
     private int numOfRes = 0;
 
@@ -15,7 +15,7 @@ public class Distress extends AppCompatActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
-        new Distress().run();
+        //new Distress().run();
     }
 
     public int comming(){
@@ -31,27 +31,27 @@ public class Distress extends AppCompatActivity implements Runnable {
 
     }
 
-    @Override
-    public void run(){
-        View.OnClickListener helpArrived = new View.OnClickListener() {
-            public void onClick(View v) {
-              helpArrived();
-            }
-        };
-        Button help = (Button)findViewById(R.id.button);
-        // Register the onClick listener with the implementation above
-        help.setOnClickListener(helpArrived);
-        TextView editText = (TextView)findViewById(R.id.rescuers_coming);
-        while (!this.helpArrived){
-            editText.setText(String.valueOf(numOfRes));
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                // ignore
-            }
-
-        }
-    }
+//    @Override
+//    public void run(){
+//        View.OnClickListener helpArrived = new View.OnClickListener() {
+//            public void onClick(View v) {
+//              helpArrived();
+//            }
+//        };
+//        Button help = (Button)findViewById(R.id.button);
+//        // Register the onClick listener with the implementation above
+//        help.setOnClickListener(helpArrived);
+//        TextView editText = (TextView)findViewById(R.id.rescuers_coming);
+//        while (!this.helpArrived){
+//            editText.setText(String.valueOf(numOfRes));
+//            try {
+//                Thread.sleep(3000);
+//            } catch (InterruptedException e) {
+//                // ignore
+//            }
+//
+//        }
+//    }
 
 
 }

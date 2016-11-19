@@ -1,4 +1,4 @@
-package com.example.hamish.rnlicodeforgood;
+package com.example.nedelev.helpplease;
 
 import android.content.SharedPreferences;
 
