@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="0"
+        android:text="2"
         android:id="@+id/rescuers_coming"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="32dp"
@@ -26,6 +26,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ETA"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,13 +69,5 @@
         android:layout_centerHorizontal="true"
         android:textSize="30dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="ETA"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
