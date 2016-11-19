@@ -30,7 +30,7 @@ public class Incident extends AppCompatActivity {
     }
 
     public int getLivesSaved() {
-
+        return 0;
     }
 
     public void setLivesSaved(int livesSaved) {

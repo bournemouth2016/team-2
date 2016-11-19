@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "502325722183",
+    "firebase_url": "https://parsepushnotification-150007.firebaseio.com",
+    "project_id": "parsepushnotification-150007",
+    "storage_bucket": "parsepushnotification-150007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502325722183:android:b563bb866f1a2779",
+        "android_client_info": {
+          "package_name": "com.example.nedelev.helpplease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502325722183-335csbj7nfedcshemq2t13qg7jj2u54n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYP81vZflcm8qq9M3bqYh1f7baiIq9fJk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
