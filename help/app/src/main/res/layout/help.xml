@@ -6,72 +6,97 @@
     android:weightSum="1"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="39dp"
-        android:layout_weight="0.33">
+        android:layout_height="280dp"
+        android:layout_weight="0.40">
 
         <ToggleButton
             android:text="ToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="121dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:textOff="SINKING"
+            android:textOn="SINKING"
+            android:id="@+id/toggleButton" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textOff="DROWNING"
+            android:textOn="DROWNING"
+            android:id="@+id/toggleButton2" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textOff="FIRE"
+            android:textOn="FIRE"
+            android:id="@+id/toggleButton3" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textOff="ASSAULT"
+            android:textOn="ASSAULT"
+            android:id="@+id/toggleButton4" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="39dp"
+            android:id="@+id/toggleButton7"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:saveEnabled="true"
+            android:textOff="MEDICAL"
+            android:textOn="MEDICAL"
+            android:scrollHorizontally="false" />
+
+        <ToggleButton
+            android:text="ToggleButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:id="@+id/toggleButton5"
-            android:layout_weight="1" />
+            android:layout_alignTop="@+id/toggleButton4"
+            android:layout_alignLeft="@+id/toggleButton2"
+            android:textOff="LOST"
+            android:textOn="LOST"
+            android:drawableBottom="@android:drawable/ic_delete"/>
 
         <ToggleButton
             android:text="ToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="128dp"
-            android:id="@+id/toggleButton4"
-            android:layout_weight="1"
-            android:textSize="14sp" />
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/toggleButton8"
+            android:layout_marginLeft="51dp"
+            android:layout_above="@+id/toggleButton6"
+            android:layout_toRightOf="@+id/toggleButton7"
+            android:textOff="INJURY"
+            android:textOn="INJURY"
+            android:drawableBottom="@android:drawable/ic_menu_info_details"/>
 
         <ToggleButton
             android:text="ToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="116dp"
-            android:id="@+id/toggleButton2"
-            android:layout_weight="1" />
-
-        <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="122dp"
-            android:id="@+id/toggleButton"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="122dp"
-        android:layout_weight="0.13">
-
-        <ToggleButton
-            android:text="ToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="146dp"
-            android:id="@+id/toggleButton11" />
-
-        <ToggleButton
-            android:text="ToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="147dp"
-            android:id="@+id/toggleButton10" />
-
-        <ToggleButton
-            android:text="ToggleButton"
-            android:layout_width="wrap_content"
-            android:layout_height="149dp"
-            android:id="@+id/toggleButton9" />
-
-        <ToggleButton
-            android:text="ToggleButton"
-            android:layout_width="match_parent"
-            android:layout_height="145dp"
-            android:id="@+id/toggleButton8" />
-    </LinearLayout>
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/toggleButton6"
+            android:layout_alignParentBottom="true"
+            android:textOff="ENGINE"
+            android:textOn="ENGINE"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
 
     <Button
         android:text="Send"
