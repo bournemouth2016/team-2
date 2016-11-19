@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import com.parse.Parse;
-
+import com.parse.ParseObject;
 
 
 public class MainAction extends AppCompatActivity {
@@ -31,6 +31,9 @@ public class MainAction extends AppCompatActivity {
                         .applicationId("MyAppId")
                         .server("http://178.62.115.151:1337/parse")
                         .build());
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above
         helpMe.setOnClickListener(this.help);
