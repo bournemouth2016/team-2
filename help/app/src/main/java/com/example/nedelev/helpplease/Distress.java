@@ -15,23 +15,22 @@ public class Distress extends AppCompatActivity  {
     private int numOfRes = 0;
     private TextView mTextField;
 
-    private CountDownTimer timer = new CountDownTimer(30000, 1000) {
-
-        public void onTick(long millisUntilFinished) {
-            mTextField.setText(""+ millisUntilFinished / 1000);
-        }
-
-    public void onFinish() {
-
-    }
-}.start();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
         mTextField = (TextView) findViewById(R.id.eta_label);
-        //new Distress().run();
+
+        CountDownTimer timer = new CountDownTimer(30000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                mTextField.setText(""+ millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+
+            }
+        }.start();
     }
 
     public int comming(){
