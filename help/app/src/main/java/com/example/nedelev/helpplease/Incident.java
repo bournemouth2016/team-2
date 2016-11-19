@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.parse.ParseObject;
 
@@ -18,10 +19,13 @@ public class Incident extends AppCompatActivity {
     private boolean vesselLost;
     private int peopleOnBoard;
 
+    private TextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.consequences);
+        mTextView = (TextView) findViewById(R.id.deaths) ;
         vesselLost = false;
         peopleOnBoard = getIntent().getIntExtra("peopleNum", 0);
         livesLost = 0;
@@ -49,12 +53,14 @@ public class Incident extends AppCompatActivity {
     private View.OnClickListener livesUp = new View.OnClickListener() {
         public void onClick(View v) {
             livesLost++;
+            mTextView.setText("" + livesLost);
         }
     };
 
     private View.OnClickListener livesDown = new View.OnClickListener() {
         public void onClick(View v) {
             livesLost--;
+            mTextView.setText("" + livesLost);
         }
     };
 
