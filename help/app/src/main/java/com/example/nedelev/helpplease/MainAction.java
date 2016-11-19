@@ -26,7 +26,7 @@ public class MainAction extends AppCompatActivity {
 
             RequestHandler distressHandler = new RequestHandler(distressObject);
             Intent intent = new Intent(v.getContext(), Help.class);
-            intent.putExtra("distress", distressHandler);
+//            intent.putExtra("distress", distressHandler);
             intent.putExtra("people",journey.getNumberOfPassengers());
             startActivity(intent);
         }
