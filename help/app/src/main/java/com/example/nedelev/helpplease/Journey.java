@@ -34,6 +34,8 @@ public class Journey extends Service {
                     logLocation(location);
                 }
             };
+			
+			locationList.add(currentLocationFinder.getLocation());
     }
 
     private void logLocation(final Location location) {
