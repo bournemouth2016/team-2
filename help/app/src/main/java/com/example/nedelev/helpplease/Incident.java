@@ -25,8 +25,8 @@ public class Incident extends AppCompatActivity {
         vesselLost = false;
         peopleOnBoard = getIntent().getIntExtra("peopleNum", 0);
         livesLost = 0;
-        Button btnSubmit = (Button) findViewById(R.id.submit);
-        btnSubmit.setOnClickListener(submit);
+        //Button btnSubmit = (Button) findViewById(R.id.submit);
+        //btnSubmit.setOnClickListener(submit);
         updateLives();
     }
 
