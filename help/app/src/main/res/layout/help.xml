@@ -17,6 +17,7 @@
             android:layout_height="120dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
+            android:background="#13555c"
             android:textOff="SINKING"
             android:textOn="SINKING"
             android:id="@+id/toggleButton" />
@@ -27,6 +28,7 @@
             android:layout_height="120dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:background="#00089e"
             android:textOff="DROWNING"
             android:textOn="DROWNING"
             android:id="@+id/toggleButton2" />
@@ -37,6 +39,7 @@
             android:layout_height="120dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:background="#38cc02"
             android:textOff="MEDICINE"
             android:textOn="MEDICINE"
             android:id="@+id/toggleButton3" />
@@ -47,6 +50,7 @@
             android:layout_height="120dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
+            android:background="#b70d10"
             android:textOff="INJURY"
             android:textOn="INJURY"
             android:id="@+id/toggleButton4" />
@@ -62,6 +66,7 @@
             android:saveEnabled="true"
             android:textOff="FIRE"
             android:textOn="FIRE"
+            android:background="#da7a1a"
             android:scrollHorizontally="false" />
 
         <ToggleButton
@@ -71,9 +76,11 @@
             android:id="@+id/toggleButton5"
             android:layout_alignTop="@+id/toggleButton4"
             android:layout_alignLeft="@+id/toggleButton2"
+            android:background="#3b2b2b"
             android:textOff="ASSAULT"
             android:textOn="ASSAULT"
-            android:drawableBottom="@android:drawable/ic_delete"/>
+            android:drawableTop="@android:drawable/ic_delete"
+            />
 
         <ToggleButton
             android:text="ToggleButton"
@@ -83,9 +90,11 @@
             android:layout_marginLeft="51dp"
             android:layout_above="@+id/toggleButton6"
             android:layout_toRightOf="@+id/toggleButton7"
+            android:background="#ffffff"
             android:textOff="LOST"
             android:textOn="LOST"
-            android:drawableBottom="@android:drawable/ic_menu_info_details"/>
+            android:drawableBottom="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="30dp"/>
 
         <ToggleButton
             android:text="ToggleButton"
@@ -93,6 +102,9 @@
             android:layout_height="120dp"
             android:id="@+id/toggleButton6"
             android:layout_alignParentBottom="true"
+            android:background="#b5eca602"
+            android:drawableBottom="adndroid:drawable/ic"
+            android:drawablePadding="5dp"
             android:textOff="ENGINE"
             android:textOn="ENGINE"
             android:layout_alignParentRight="true" />
