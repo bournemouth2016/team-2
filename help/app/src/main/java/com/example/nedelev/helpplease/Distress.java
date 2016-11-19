@@ -1,8 +1,9 @@
-import android.content.Intent;
+package com.example.nedelev.helpplease;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import java.util.*;
 
 
 public class Distress extends AppCompatActivity implements Runnable {
@@ -14,7 +15,7 @@ public class Distress extends AppCompatActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
-        new Thread.run();
+        new Distress().run();
     }
 
     public int comming(){
@@ -30,20 +31,25 @@ public class Distress extends AppCompatActivity implements Runnable {
 
     }
 
-    @Orverride
+    @Override
     public void run(){
-        private OnClickListener halpArrived = new OnClickListener() {
+        View.OnClickListener helpArrived = new View.OnClickListener() {
             public void onClick(View v) {
-              helpArrived()  ;
+              helpArrived();
             }
         };
         Button help = (Button)findViewById(R.id.button);
         // Register the onClick listener with the implementation above
-        help.setOnClickListener(this.send);
+        help.setOnClickListener(helpArrived);
         TextView editText = (TextView)findViewById(R.id.rescuers_coming);
-        while (helpArrived == false){
-            editText.setText(numOfRes.toString());
-            Thread.sleep(3000)
+        while (!this.helpArrived){
+            editText.setText(String.valueOf(numOfRes));
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                // ignore
+            }
+
         }
     }
 

@@ -1,66 +1,67 @@
 package com.example.nedelev.helpplease;
 
 import java.util.ArrayList;
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
+public class Help extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> typeOfEmergency = new ArrayList<Integer>();
 
-    private OnCheckedChangeListener sinking = new OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+    private CompoundButton.OnCheckedChangeListener sinking = new CompoundButton.OnCheckedChangeListener() {
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button, isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener drowining = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener drowning = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener medicine = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener medicine = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener fire = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener fire = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener lost = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener lost = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener injury = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener injury = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener assault = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener assault = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnCheckedChangeListener engine = new OnCheckedChangeListener() {
+    };
+    private CompoundButton.OnCheckedChangeListener engine = new CompoundButton.OnCheckedChangeListener() {
         @Override
-        public void onCheckedChanged(CompoundButton toggleButton, boolean isChecked) {
-            whatAlert(toggleButton,isChecked);
+        public void onCheckedChanged(CompoundButton button, boolean isChecked) {
+            whatAlert(button,isChecked);
         }
-    }) ;
-    private OnClickListener send = new OnClickListener() {
+    };
+    private View.OnClickListener send = new View.OnClickListener() {
         public void onClick(View v) {
             whatAlert(null,false);
         }
@@ -72,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help);
 
-        ToggleButton siking = (ToggleButton)findViewById(R.id.toggleButton);
+        ToggleButton sinking = (ToggleButton)findViewById(R.id.toggleButton);
         // Register the onClick listener with the implementation above
         sinking.setOnCheckedChangeListener(this.sinking);
-        ToggleButton drowinig = (ToggleButton)findViewById(R.id.toggleButton2);
+        ToggleButton drowning = (ToggleButton)findViewById(R.id.toggleButton2);
         // Register the onClick listener with the implementation above
-        drowning.setOnCheckedChangeListener(this.drowining);
+        drowning.setOnCheckedChangeListener(this.drowning);
         ToggleButton medicine = (ToggleButton)findViewById(R.id.toggleButton3);
         // Register the onClick listener with the implementation above
         medicine.setOnCheckedChangeListener(this.medicine);
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         injury.setOnCheckedChangeListener(this.injury);
         ToggleButton assault = (ToggleButton)findViewById(R.id.toggleButton5);
         // Register the onClick listener with the implementation above
-        assault.setOnCheckedChangeListenerr(this.assault);
+        assault.setOnCheckedChangeListener(this.assault);
         ToggleButton engine = (ToggleButton)findViewById(R.id.toggleButton6);
         // Register the onClick listener with the implementation above
         engine.setOnCheckedChangeListener(this.engine);
@@ -102,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void whatAlert(ToggleButton butt, boolean checked){
+    private void whatAlert(CompoundButton butt, boolean checked){
         if(checked) {
-            switch (ToggleButton.getText()) {
+            switch (butt.getText().toString()) {
                 case "SINKING":
                     typeOfEmergency.add(1);
                     break;
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    private send(){
+    private void send(){
         Intent intent = new Intent(this, Distress.class);
         startActivity(intent);
     }

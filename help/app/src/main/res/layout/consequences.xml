@@ -3,47 +3,66 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Lives lost"
-        android:id="@+id/textView2"
-        android:textSize="40sp"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_toLeftOf="@+id/imageView2"
-        android:layout_toStartOf="@+id/imageView2"
-        android:layout_marginBottom="38dp" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Lives lost"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:textSize="40dp"-->
+        <!--android:layout_alignBottom="@+id/imageView2"-->
+        <!--android:layout_toLeftOf="@+id/imageView2"-->
+        <!--android:layout_toStartOf="@+id/imageView2"-->
+        <!--android:layout_marginBottom="38dp" />-->
+    <!--<ImageView-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="110dp"-->
+        <!--android:id="@+id/imageView2"-->
+        <!---->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="110dp"
-        android:id="@+id/imageView2"
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="+"-->
+        <!--android:id="@+id/increment_death"-->
+        <!--android:textSize="50sp"-->
+        <!--android:layout_below="@+id/imageView2"-->
+        <!--android:layout_alignLeft="@+id/textView2"-->
+        <!--android:layout_alignStart="@+id/textView2" />-->
 
-        android:background="@drawable/death_icon"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="-"-->
+        <!--android:id="@+id/button3"-->
+        <!--android:textSize="50sp"-->
+        <!--android:layout_below="@+id/textView2"-->
+        <!--android:layout_alignLeft="@+id/imageView2"-->
+        <!--android:layout_alignStart="@+id/imageView2" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:id="@+id/increment_death"
-        android:textSize="50sp"
-        android:layout_below="@+id/imageView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="0"-->
+        <!--android:id="@+id/deaths"-->
+        <!--android:layout_alignBottom="@+id/increment_death"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:textSize="60sp" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:id="@+id/button3"
-        android:textSize="50sp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Vessel lost?"-->
+        <!--android:id="@+id/textView4"-->
+        <!--android:textSize="40sp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toLeftOf="@+id/imageView3"-->
+        <!--android:layout_toStartOf="@+id/imageView3" />-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -51,21 +70,36 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="0"
         android:id="@+id/deaths"
-        android:layout_alignBottom="@+id/increment_death"
         android:layout_centerHorizontal="true"
         android:textSize="60sp" />
 
-    <TextView
+    <!--<ImageView-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="110dp"-->
+        <!--android:id="@+id/imageView3"-->
+        <!--android:background="@drawable/sinking_icon"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/vesselLost"-->
+        <!--android:layout_below="@+id/imageView3"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="36dp"-->
+        <!--android:checked="false"-->
+        <!--android:scaleX="5"-->
+        <!--android:scaleY="5"/>-->
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Vessel lost?"
-        android:id="@+id/textView4"
-        android:textSize="40sp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/imageView3"
-        android:layout_toStartOf="@+id/imageView3" />
-
+        android:text="-"
+        android:id="@+id/button3"
+        android:textSize="50sp"
+        android:layout_alignRight="@+id/toggleButton6" />
     <ImageView
         android:layout_width="150dp"
         android:layout_height="110dp"
