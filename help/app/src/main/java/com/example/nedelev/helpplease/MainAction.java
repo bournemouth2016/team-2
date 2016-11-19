@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import com.parse.Parse;
 import com.parse.ParseObject;
 
@@ -27,12 +28,12 @@ public class MainAction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Parse.initialize(new Parse.Configuration.Builder(this)
+        Parse.initialize(new Parse.Configuration.Builder(this.getApplicationContext())
                         .applicationId("MyAppId")
                         .server("http://178.62.115.151:1337/parse")
                         .build());
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
+        ParseObject testObject = new ParseObject("Person");
+        testObject.put("role", "owner");
         testObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above

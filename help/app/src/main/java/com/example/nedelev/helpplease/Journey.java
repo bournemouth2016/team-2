@@ -1,4 +1,4 @@
-package com.example.jonat.testproject;
+package com.example.nedelev.helpplease;
 
 import android.app.Service;
 import android.content.Context;
