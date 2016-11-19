@@ -14,10 +14,15 @@ public class Incident extends AppCompatActivity {
 
     private int livesLost;
     private boolean vesselLost;
+    private int lives;
 
-    public Incident(){
-        livesLost = 0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.in_distress);
         vesselLost = false;
+        lives = getIntent().getIntExtra("peopleNum", 0);
+        livesLost = 0;
     }
 
     public int getLivesLost() {
