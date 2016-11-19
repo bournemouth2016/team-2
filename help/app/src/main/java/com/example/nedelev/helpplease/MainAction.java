@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.parse.Parse;
+import com.parse.ParseGeoPoint;
 import com.parse.ParseObject;
 
 
@@ -19,7 +20,7 @@ public class MainAction extends AppCompatActivity {
     private View.OnClickListener help = new View.OnClickListener() {
         public void onClick(View v) {
             ParseObject distressObject = new ParseObject("Distress");
-            distressObject.put("journey", journey);
+            distressObject.put("journey", journeyObject.get("objectId"));
             distressObject.saveInBackground();
             RequestHandler distressHandler = new RequestHandler(distressObject);
             Intent intent = new Intent(v.getContext(), Help.class);
@@ -49,9 +50,9 @@ public class MainAction extends AppCompatActivity {
                         .build());
         //Setup default statsggit
         journeyObject = new ParseObject("Journey");
-//        journeyObject.put("boat", boat);
+        //journeyObject.put("boat", boat);
         journeyObject.put("numPassengers", journey.getNumberOfPassengers());
-        journeyObject.put("currentLocation", journey.getLocationList());
+        //journeyObject.put("currentLocation", new ParseGeoPoint(journey.getLocationList().get(0).getLatitude(), journey.getLocationList().get(1).getLatitude()));
         journeyObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above
