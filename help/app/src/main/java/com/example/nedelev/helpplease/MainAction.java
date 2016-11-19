@@ -19,9 +19,11 @@ public class MainAction extends AppCompatActivity {
 
     private View.OnClickListener help = new View.OnClickListener() {
         public void onClick(View v) {
+
             ParseObject distressObject = new ParseObject("Distress");
             distressObject.put("journey", journeyObject.getObjectId());
             distressObject.saveInBackground();
+
             RequestHandler distressHandler = new RequestHandler(distressObject);
             Intent intent = new Intent(v.getContext(), Help.class);
             intent.putExtra("distress", distressHandler);
@@ -43,11 +45,7 @@ public class MainAction extends AppCompatActivity {
         //Default configuration
         boat = new Boat(0, Boat.Size.MEDIUM, 3);
         journey = new Journey(boat, 2, this.getApplicationContext());
-        //Connect to the Parse server
-        Parse.initialize(new Parse.Configuration.Builder(this.getApplicationContext())
-                        .applicationId("myAppId")
-                        .server("http://178.62.115.151:1337/parse")
-                        .build());
+  
         //Setup default statsggit
         journeyObject = new ParseObject("Journey");
         //journeyObject.put("boat", boat);
