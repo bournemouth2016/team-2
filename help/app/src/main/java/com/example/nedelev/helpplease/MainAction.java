@@ -11,9 +11,19 @@ import com.parse.ParseObject;
 
 
 public class MainAction extends AppCompatActivity {
+
+    private ParseObject journeyObject;
+    private Boat boat;
+    private Journey journey;
+
     private View.OnClickListener help = new View.OnClickListener() {
         public void onClick(View v) {
+            ParseObject distressObject = new ParseObject("Distress");
+            distressObject.put("journey", journey);
+            distressObject.saveInBackground();
+            RequestHandler distressHandler = new RequestHandler(distressObject);
             Intent intent = new Intent(v.getContext(), Help.class);
+            intent.putExtra("distress", distressHandler);
             startActivity(intent);
         }
     };
@@ -28,13 +38,20 @@ public class MainAction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Default configuration
+        boat = new Boat(0, Boat.Size.MEDIUM, 3);
+        journey = new Journey(boat, 2, this.getApplicationContext());
+        //Connect to the Parse server
         Parse.initialize(new Parse.Configuration.Builder(this.getApplicationContext())
                         .applicationId("myAppId")
                         .server("http://178.62.115.151:1337/parse")
                         .build());
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("potato", "cabbage");
-        testObject.saveInBackground();
+        //Setup default stats
+        journeyObject = new ParseObject("Journey");
+        journeyObject.put("boat", boat);
+        journeyObject.put("numPassengers", journey.getNumberOfPassengers());
+        journeyObject.put("currentLocation", journey.getLocationList());
+        journeyObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above
         helpMe.setOnClickListener(this.help);
