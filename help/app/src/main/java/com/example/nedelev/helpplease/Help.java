@@ -72,6 +72,7 @@ public class Help extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help);
+
         ToggleButton sinking = (ToggleButton)findViewById(R.id.toggleButton);
         // Register the onClick listener with the implementation above
         sinking.setOnCheckedChangeListener(this.sinking);
