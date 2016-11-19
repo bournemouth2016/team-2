@@ -14,7 +14,6 @@
         <!--android:layout_toLeftOf="@+id/imageView2"-->
         <!--android:layout_toStartOf="@+id/imageView2"-->
         <!--android:layout_marginBottom="38dp" />-->
-
     <!--<ImageView-->
         <!--android:layout_width="150dp"-->
         <!--android:layout_height="110dp"-->
@@ -64,6 +63,7 @@
         <!--android:layout_centerVertical="true"-->
         <!--android:layout_toLeftOf="@+id/imageView3"-->
         <!--android:layout_toStartOf="@+id/imageView3" />-->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,5 +100,24 @@
         android:id="@+id/button3"
         android:textSize="50sp"
         android:layout_alignRight="@+id/toggleButton6" />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:id="@+id/imageView3"
+        android:background="@drawable/sinking_icon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vesselLost"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:checked="false"
+        android:scaleX="5"
+        android:scaleY="5" />
 
 </RelativeLayout>

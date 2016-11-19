@@ -1,6 +1,5 @@
 package com.example.nedelev.helpplease;
 
-import java.util.ArrayList;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +16,7 @@ public class MainAction extends AppCompatActivity {
     };
     private View.OnClickListener reg = new View.OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(this, Register.class);
+            Intent intent = new Intent(v.getContext(), Register.class);
             startActivity(intent);
         }
     };
