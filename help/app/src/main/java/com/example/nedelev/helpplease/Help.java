@@ -147,9 +147,10 @@ public class Help extends AppCompatActivity {
     private void send(){
 
         for(int i = 0 ; typeOfEmergency.size()<i; i++){
-                    
+
         }
         Intent intent = new Intent(this, Distress.class);
+        intent.putExtra("peopleNum", getIntent().getIntExtra("people",0));
         startActivity(intent);
     }
 
