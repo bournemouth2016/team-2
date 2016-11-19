@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
-import com.parse.ParseObject;
 
 public class Help extends AppCompatActivity {
 
@@ -147,9 +146,10 @@ public class Help extends AppCompatActivity {
     private void send(){
 
         for(int i = 0 ; typeOfEmergency.size()<i; i++){
-            switch (typeOfEmergency.get(i)):
-            case 1:
-                distressObject.put("incidentType", "");
+            switch (typeOfEmergency.get(i)) {
+                case 1:
+                    distressObject.put("incidentType", "");
+            }
         }
         Intent intent = new Intent(this, Distress.class);
         intent.putExtra("peopleNum", getIntent().getIntExtra("people",0));

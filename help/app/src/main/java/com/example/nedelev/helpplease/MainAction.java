@@ -20,7 +20,7 @@ public class MainAction extends AppCompatActivity {
     private View.OnClickListener help = new View.OnClickListener() {
         public void onClick(View v) {
             ParseObject distressObject = new ParseObject("Distress");
-            distressObject.put("journey", journeyObject.get("objectId"));
+            distressObject.put("journey", journeyObject.getObjectId());
             distressObject.saveInBackground();
             RequestHandler distressHandler = new RequestHandler(distressObject);
             Intent intent = new Intent(v.getContext(), Help.class);
@@ -50,16 +50,9 @@ public class MainAction extends AppCompatActivity {
                         .build());
         //Setup default stats
         journeyObject = new ParseObject("Journey");
-<<<<<<< HEAD
-        //journeyObject.put("boat", boat);
-        journeyObject.put("numPassengers", journey.getNumberOfPassengers());
-        //journeyObject.put("currentLocation", journey.getLocationList());
-=======
-
         //journeyObject.put("boat", boat);
         journeyObject.put("numPassengers", journey.getNumberOfPassengers());
         //journeyObject.put("currentLocation", new ParseGeoPoint(journey.getLocationList().get(0).getLatitude(), journey.getLocationList().get(1).getLatitude()));
->>>>>>> da9030ce6e4d95a474200745b9936cd209b284eb
         journeyObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above

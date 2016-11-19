@@ -35,15 +35,7 @@ public class Incident extends AppCompatActivity {
     }
 
     public int getLivesSaved() {
-<<<<<<< HEAD
         return peopleOnBoard - livesLost;
-=======
-        return 0;
-    }
-
-    public void setLivesSaved(int livesSaved) {
-
->>>>>>> da9030ce6e4d95a474200745b9936cd209b284eb
     }
 
     public void setVesselLost(boolean lost) {
