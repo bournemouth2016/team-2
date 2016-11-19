@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 
-public class Help extends AppCompatActivity {
+public class MainAction extends AppCompatActivity {
     private OnClickListener help = new OnClickListener() {
         public void onClick(View v) {
             Intent intent = new Intent(this, Help.class);
