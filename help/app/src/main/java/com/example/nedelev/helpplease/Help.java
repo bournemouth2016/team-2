@@ -10,8 +10,11 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
+import com.parse.ParseObject;
+
 public class Help extends AppCompatActivity {
 
+    private RequestHandler distressObject;
     private ArrayList<Integer> typeOfEmergency = new ArrayList<Integer>();
 
     private CompoundButton.OnCheckedChangeListener sinking = new CompoundButton.OnCheckedChangeListener() {
@@ -72,7 +75,7 @@ public class Help extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.help);
-
+        distressObject =(RequestHandler) getIntent().getSerializableExtra("distress");
         ToggleButton sinking = (ToggleButton)findViewById(R.id.toggleButton);
         // Register the onClick listener with the implementation above
         sinking.setOnCheckedChangeListener(this.sinking);
@@ -142,7 +145,14 @@ public class Help extends AppCompatActivity {
 
     }
     private void send(){
+
+        for(int i = 0 ; typeOfEmergency.size()<i; i++){
+            switch (typeOfEmergency.get(i)):
+            case 1:
+                distressObject.put("incidentType", "");
+        }
         Intent intent = new Intent(this, Distress.class);
+        intent.putExtra("peopleNum", getIntent().getIntExtra("people",0));
         startActivity(intent);
     }
 
