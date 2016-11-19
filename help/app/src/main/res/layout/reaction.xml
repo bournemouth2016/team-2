@@ -5,7 +5,7 @@
     android:baselineAligned="false">
 
     <ImageButton
-        android:src="@android:drawable/checkbox_on_background"
+        android:src="@android:drawable/ic_input_add"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="53dp"
