@@ -103,7 +103,7 @@
             android:id="@+id/toggleButton6"
             android:layout_alignParentBottom="true"
             android:background="#b5eca602"
-            android:drawableBottom="adndroid:drawable/ic"
+            android:drawableBottom="@android:drawable/ic_menu_info_details"
             android:drawablePadding="5dp"
             android:textOff="ENGINE"
             android:textOn="ENGINE"
