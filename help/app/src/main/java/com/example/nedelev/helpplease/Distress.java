@@ -13,24 +13,24 @@ import org.w3c.dom.Text;
 public class Distress extends AppCompatActivity  {
     private boolean helpArrived = false;
     private int numOfRes = 0;
-    private TextView mTextField = (TextView) findViewById(R.id.eta_label);
-
-    private CountDownTimer timer = new CountDownTimer(30000, 1000) {
-
-        public void onTick(long millisUntilFinished) {
-            mTextField.setText(""+ millisUntilFinished / 1000);
-        }
-
-    public void onFinish() {
-
-    }
-}.start();
+    private TextView mTextField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.in_distress);
-        //new Distress().run();
+        mTextField = (TextView) findViewById(R.id.eta_label);
+
+        CountDownTimer timer = new CountDownTimer(30000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                mTextField.setText(""+ millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+
+            }
+        }.start();
     }
 
     public int comming(){
