@@ -6,11 +6,9 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fad232eb-2a39-44a6-ab65-ad333f27580f" name="Default" comment="fixed a bunch of things">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/help/.idea/vcs.xml" afterPath="" />
+    <list default="true" id="fad232eb-2a39-44a6-ab65-ad333f27580f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help/.idea/gradle.xml" afterPath="$PROJECT_DIR$/help/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help/.idea/misc.xml" afterPath="$PROJECT_DIR$/help/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Incident.java" afterPath="$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Incident.java" />
     </list>
     <ignored path="team-2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/help/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,8 +68,10 @@
         <entry file="file://$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Incident.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-120">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,9 +79,12 @@
       <file leaf-file-name="Distress.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Distress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="270">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+              <folding>
+                <element signature="e#1769#1770#0" expanded="true" />
+                <element signature="e#1812#1813#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +119,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/help/app/src/main/res/layout/in_distress.xml" />
+        <option value="$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Distress.java" />
       </list>
     </option>
   </component>
@@ -386,11 +390,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/build.gradle</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/AndroidManifest.xml</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Distress.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/MainAction.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/res/layout/help.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/res/layout/in_distress.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Help.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Incident.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/app/src/main/res/layout/consequences.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -398,7 +403,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/help/.idea/encodings.xml</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -755,7 +759,21 @@
       <option name="project" value="LOCAL" />
       <updated>1479552175808</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed crash (yay)">
+      <created>1479552309564</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1479552309564</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed another crash (yay)">
+      <created>1479553325879</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479553325879</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -807,7 +825,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed a bunch of things" />
     <MESSAGE value="fixed crash (yay)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed crash (yay)" />
+    <MESSAGE value="fixed another crash (yay)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed another crash (yay)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -839,7 +858,7 @@
     <entry file="file://$PROJECT_DIR$/help/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -858,16 +877,21 @@
     <entry file="file://$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Incident.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/help/app/src/main/java/com/example/nedelev/helpplease/Distress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding>
+            <element signature="e#1769#1770#0" expanded="true" />
+            <element signature="e#1812#1813#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

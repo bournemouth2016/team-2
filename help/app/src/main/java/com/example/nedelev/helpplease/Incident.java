@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.parse.ParseObject;
 
@@ -18,15 +19,18 @@ public class Incident extends AppCompatActivity {
     private boolean vesselLost;
     private int peopleOnBoard;
 
+    private TextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.in_distress);
+        setContentView(R.layout.consequences);
+        mTextView = (TextView) findViewById(R.id.deaths) ;
         vesselLost = false;
         peopleOnBoard = getIntent().getIntExtra("peopleNum", 0);
         livesLost = 0;
-        //Button btnSubmit = (Button) findViewById(R.id.submit);
-        //btnSubmit.setOnClickListener(submit);
+        Button btnSubmit = (Button) findViewById(R.id.submit);
+        btnSubmit.setOnClickListener(submit);
         updateLives();
     }
 
@@ -49,12 +53,16 @@ public class Incident extends AppCompatActivity {
     private View.OnClickListener livesUp = new View.OnClickListener() {
         public void onClick(View v) {
             livesLost++;
+            mTextView.setText("" + livesLost);
         }
     };
 
     private View.OnClickListener livesDown = new View.OnClickListener() {
         public void onClick(View v) {
-            livesLost--;
+            if (livesLost > 0) {
+                livesLost--;
+            }
+            mTextView.setText("" + livesLost);
         }
     };
 
@@ -72,7 +80,7 @@ public class Incident extends AppCompatActivity {
         btnUp.setOnClickListener(livesUp);
         Button btnDown = (Button)findViewById(R.id.decrement_death);
         // Register the onClick listener with the implementation above
-        btnUp.setOnClickListener(livesDown);
+        btnDown.setOnClickListener(livesDown);
     }
 
     private void updateServer() {

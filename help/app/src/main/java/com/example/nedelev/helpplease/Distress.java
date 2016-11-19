@@ -19,12 +19,14 @@ public class Distress extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.in_distress);
         Button btnHelp = (Button)findViewById(R.id.button);
         // Register the onClick listener with the implementation above
         btnHelp.setOnClickListener(help);
         //new Distress().run();
         mTextField = (TextView) findViewById(R.id.eta_label);
+
 
         CountDownTimer timer = new CountDownTimer(30000, 1000) {
 
@@ -57,6 +59,12 @@ public class Distress extends AppCompatActivity  {
     private void generateReport(){
 
     }
+
+    View.OnClickListener helpArrivedAction = new View.OnClickListener() {
+            public void onClick(View v) {
+              helpArrived();
+            }
+    };
 
 //    @Override
 //    public void run(){
