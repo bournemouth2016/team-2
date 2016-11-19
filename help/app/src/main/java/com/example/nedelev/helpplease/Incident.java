@@ -77,7 +77,7 @@ public class Incident extends AppCompatActivity {
 
     private void updateServer() {
         ParseObject incidentReport = new ParseObject("Incident");
-        incidentReport.put("casulties", livesLost);
+        incidentReport.put("casualties", livesLost);
         incidentReport.put("boatSaved", !vesselLost);
         incidentReport.saveInBackground();
     }
