@@ -62,30 +62,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize = "17sp"
-        android:id="@+id/txtPeople"
+        android:id="@+id/lblPeople"
         android:layout_below="@+id/txtPhone"
         android:layout_alignLeft="@+id/txtPhone"
         android:layout_alignStart="@+id/txtPhone"
         android:layout_marginTop="16dp" />
+
+    <ImageButton
+        android:layout_height="75dp"
+        android:layout_width="100dp"
+
+        android:layout_marginTop="46dp"
+        android:scaleType = "fitCenter"
+        android:id="@+id/imageButton"
+        android:layout_below="@+id/txtPeople"
+        android:layout_alignLeft="@+id/txtPeople"
+        android:layout_alignStart="@+id/txtPeople" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/txtPeople"
-        android:layout_alignLeft="@+id/txtPeople"
-        android:layout_alignStart="@+id/txtPeople" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/checkbox_on_background"
-
-        android:layout_marginTop="43dp"
-        android:id="@+id/imageButton"
-        android:layout_below="@+id/editText3"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/txtPeople"
+        android:layout_below="@+id/lblPeople"
+        android:layout_alignLeft="@+id/lblPeople"
+        android:layout_alignStart="@+id/lblPeople" />
 
 </RelativeLayout>
