@@ -21,12 +21,12 @@ public class Incident extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.in_distress);
+        setContentView(R.layout.consequences);
         vesselLost = false;
         peopleOnBoard = getIntent().getIntExtra("peopleNum", 0);
         livesLost = 0;
-        //Button btnSubmit = (Button) findViewById(R.id.submit);
-        //btnSubmit.setOnClickListener(submit);
+        Button btnSubmit = (Button) findViewById(R.id.submit);
+        btnSubmit.setOnClickListener(submit);
         updateLives();
     }
 
@@ -72,7 +72,7 @@ public class Incident extends AppCompatActivity {
         btnUp.setOnClickListener(livesUp);
         Button btnDown = (Button)findViewById(R.id.decrement_death);
         // Register the onClick listener with the implementation above
-        btnUp.setOnClickListener(livesDown);
+        btnDown.setOnClickListener(livesDown);
     }
 
     private void updateServer() {
