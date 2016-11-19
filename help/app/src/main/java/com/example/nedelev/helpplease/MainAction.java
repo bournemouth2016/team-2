@@ -47,7 +47,7 @@ public class MainAction extends AppCompatActivity {
                         .applicationId("myAppId")
                         .server("http://178.62.115.151:1337/parse")
                         .build());
-        //Setup default stats
+        //Setup default statsggit
         journeyObject = new ParseObject("Journey");
 //        journeyObject.put("boat", boat);
         journeyObject.put("numPassengers", journey.getNumberOfPassengers());
