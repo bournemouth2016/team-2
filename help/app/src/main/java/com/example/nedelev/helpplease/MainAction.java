@@ -29,11 +29,11 @@ public class MainAction extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Parse.initialize(new Parse.Configuration.Builder(this.getApplicationContext())
-                        .applicationId("MyAppId")
+                        .applicationId("myAppId")
                         .server("http://178.62.115.151:1337/parse")
                         .build());
-        ParseObject testObject = new ParseObject("Person");
-        testObject.put("role", "owner");
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("potato", "cabbage");
         testObject.saveInBackground();
         Button helpMe = (Button)findViewById(R.id.helpButton);
         // Register the onClick listener with the implementation above
